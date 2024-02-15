@@ -1,0 +1,206 @@
+body {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    abackground-color: white;
+    background-image: url(backgroundimage1.jpg);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    abackground-color: white;
+    background-image: url(backgroundimage1.jpg);
+    height: 100px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    animation: load1 1000ms;
+    border-bottom: #8AAAE5 solid 2px;
+    border-radius: 20px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #8AAAE5;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 3px;
+    abackground-color: white;
+    background-image: url(backgroundimage1.jpg);
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    background-color: #8AAAE5;
+    color: white;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.znaky {
+    color: #8AAAE5;
+    font-size: 50px;
+    text-align: center;
+    animation: load1 1000ms ease-in-out;
+    letter-spacing: 15px;
+}
+
+.dolu {
+    display: flex;
+    color: #8AAAE5;
+    flex-direction: row;
+    justify-content: center;
+    animation: dolu 3s ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    margin-top: -20px;
+    height: 400px;
+}
+
+@keyframes dolu {
+    0% {
+        scale: 0.9;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
+
+.nadpis {
+    flex-direction: row;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Made in China', sans-serif;
+    margin-top: 300px;
+    letter-spacing: 10px;
+    color: #8AAAE5;
+    animation: load1 1000ms ease-in-out;
+}
+
+@keyframes load1 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+
+img {
+    height: 150px;
+    transition: 100ms ease-in-out;
+    border: #8AAAE5 solid 4px;
+    border-radius: 5px;
+}
+
+.grid-item1 {
+    text-align: center;
+    margin-top: 400px;
+    color: #8AAAE5;
+}
+
+.fotky1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.drazdany {
+    text-align: center;
+    margin-top: 100px;
+    color: #8AAAE5;
+}
+
+.fotky2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.slamnik1 {
+    text-align: center;
+    margin-top: 100px;
+    color: #8AAAE5;
+}
+
+.fotky3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.uk {
+    text-align: center;
+    margin-top: 100px;
+    color: #8AAAE5;
+}
+
+.fotky4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+img:hover {
+    scale: 1.6;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8AAAE5;
+}
+
+@media screen and (max-width:850px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        width: 200px;
+        height: 500px;
+    }
+
+    .nadpis {
+        font-size: 25px;
+        margin-top: 170px;
+    }
+
+    .fotky1,.fotky2,.fotky3,.fotky4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    img {
+        height: 75px;
+        width: 110px;
+        margin: 20px auto 20px auto;
+    }
+}

@@ -1,0 +1,208 @@
+body {
+    background-image: url(backgroundimage1.jpg);
+    user-select: none;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    abackground-color:  #EDF4F2;
+    background-image: url(backgroundimage1.jpg);
+    height: 100px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    animation: load0 1000ms;
+    border-bottom: #20948B solid 2px;
+    border-radius: 20px;
+    
+}
+
+@keyframes load0 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+.a {
+    text-decoration: none;
+    color: #20948B;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 3px;
+    background-image: url(backgroundimage1.jpg);
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.a:hover {
+    color:  #EDF4F2;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.nadpis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #20948B;
+    font-family: 'Made in China', sans-serif;
+    margin-top: 140px;
+    line-height: 20px;
+    letter-spacing: 20px;
+}
+
+.myjsme {
+    font-size: 50px;
+    animation: load1 1000ms ease-in-out;
+}
+
+@keyframes load1 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.kungpao {
+    font-size: 100px;
+    animation: load2 1000ms ease-in-out;
+}
+
+@keyframes load2 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+.dolu {
+    display: flex;
+    color: #20948B;
+    flex-direction: row;
+    justify-content: center;
+    animation: dolu 3s ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    margin-top: 60px;
+    height: 400px;
+}
+
+@keyframes dolu {
+    0% {
+        scale: 0.9;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
+.aktualne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podnadpis {
+    color: #20948B;
+    font-size: 40px;
+    animation: fade2 linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 50%;
+}
+
+ul {
+    font-size: 20px;
+}
+
+.text01 {
+    border: #20948B 2px solid;
+    margin-bottom: 100px;
+    padding: 20px;
+    animation: fade1 linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+@keyframes fade1 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fade2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 200px;
+        height: 500px;
+    }
+    .kungpao {
+        font-size: 80px;
+        margin-bottom: 100px;
+    }
+    .myjsme {
+        font-size: 40px;
+    }
+    .nadpis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.facebook {
+    text-decoration: none;
+    color: #20948B;
+}
+
+.fotorep {
+    text-decoration: none;
+    color: #20948B;
+}
+
+
+

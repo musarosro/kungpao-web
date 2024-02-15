@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    wbackground-color: #FCF6F5;
+    background-image: url(backgroundimage1.jpg);
+    user-select: none;
+    
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    abackground-color:  #FCF6F5;
+    background-image: url(backgroundimage1.jpg);
+    height: 100px;
+    align-items: center;
+    width: 90%;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    animation: load1 ease-in-out 1000ms;
+    border-bottom: #990011 solid 2px;
+    border-radius: 20px;
+}
+
+@keyframes load1 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #990011;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 3px;
+    abackground-color: #FCF6F5;
+    background-image: url(backgroundimage1.jpg);
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.4s ease-in-out;
+    letter-spacing: 2px;
+
+}
+
+a:hover {
+    background-color: #990011;
+    color: black;
+    border-radius: 3px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 300px;
+    
+    font-size: 120px;
+    letter-spacing: 8px;
+    font-weight: lighter;
+    font-family: 'Made in China', sans-serif;
+    color: #990011;
+    animation: load2 ease-in-out 1000ms;
+}
+
+@keyframes load2 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.cast1h {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #990011;
+}
+
+.cast1p {
+    font-size: 20px;
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 35px;
+    border: 1px solid #990011;
+    padding: 16px;
+    color: #990011;
+    background-color: white;
+}
+
+.dolu {
+    display: flex;
+    color: #990011;
+    flex-direction: row;
+    justify-content: center;
+    animation: dolu 3s ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    margin-top: 100px;
+    height: 400px;
+}
+
+@keyframes dolu {
+    0% {
+        scale: 0.9;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
+.sekce1 {
+    height: 100vh;
+}
+
+.sekce2 {
+    height: 100vh;
+    margin-top: 70vh;
+    margin-bottom: 100px;
+}
+
+
+
+.casth {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 150px;
+    color: #990011;
+}
+
+.castp {
+    font-size: 20px;
+    width: 40%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 35px;
+    border: 1px solid #990011;
+    padding: 16px;
+    color: #990011;
+    background-color: white;
+}
+
+.animace {
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;;
+}
+
+@keyframes fade {
+    from {
+        scale: 0.9; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+
+.animace1 {
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.animace3 {
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #990011;
+}
+
+::-webkit-scrollbar-track {
+    abackground-color: #FCF6F5;
+    background-image: url(backgroundimage1.jpg);
+}
+
+@media screen and (max-width: 850px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        width: 200px;
+        height: 500px;
+    }
+    h1 {
+        font-size: 50px;
+        margin-top: 60px;
+    }
+
+    .animace,.animace1,.animace3 {
+        animation: none;
+    }
+    .cast1h,.cast1p,.casth,.castp {
+        width: 85%;
+        text-align: center;
+    }
+    .cast1h,.casth {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

@@ -1,0 +1,312 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(backgroundimage1.jpg);
+    height: 100px;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    font-family: Geneva,Tahoma,Verdana,sans-serif; 
+    animation: load1 1000ms;
+    border-bottom: #000000 solid 2px;
+    border-radius: 20px;
+    
+}
+
+@keyframes load1 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.sekce1 {
+    height: 100vh;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 3px;
+    background-image: url(backgroundimage1.jpg);
+    cursor: pointer;
+    font-size: 18px;
+    transition: 400ms ease-out;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    border: white 1px solid;
+    color: white;
+}
+
+.podnadpis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    animation: load3 ease-in-out 1000ms;
+}
+
+@keyframes load3 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(75%);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+.dolu {
+    display: flex;
+    color: black;
+    flex-direction: row;
+    justify-content: center;
+    animation: dolu 3s ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    margin-top: -20px;
+    height: 400px;
+}
+
+@keyframes dolu {
+    0% {
+        scale: 0.9;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 0.9;
+    }
+}
+
+
+.container02 {
+    display: flex;
+    flex-direction: row;
+    font-size: 150px;
+    justify-content: space-around;
+    font-family: 'Made in China', sans-serif;
+    margin-top: 100px;
+    animation: load2 ease-in-out 1000ms;
+}
+
+@keyframes load2 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+     
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+       
+    }
+}
+
+body {
+ background-image: url(backgroundimage1.jpg);
+ margin: 0;
+ padding: 0;
+ user-select: none;
+    
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    abackground-color: white;
+    background-image: url(backgroundimage1.jpg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.text01 {
+    font-size: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 130px;
+    line-height: 35px;
+    margin-bottom: 120px;
+    border: 1px solid black;
+    padding: 16px;
+    background-color: white;
+}
+
+.animace1 {
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 50%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.p1 {
+    animation: special 1000ms ease-in-out;
+}
+
+@keyframes special {
+    from {
+        opacity: 0;
+        scale: 0.9;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+.p2 {
+    animation: special2 1000ms ease-in-out;
+}
+
+@keyframes special2 {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.animace2 {
+    animation: fade2 linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 50%;
+}
+
+@keyframes fade2 {
+    from {
+        opacity: 0;
+        scale: 0.8;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.sekce4 {
+    
+    border: black solid 1px;
+    width: 600px;
+    padding: 16px;
+    font-size: 20px;
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 50%;
+    background-color: white;
+}
+
+.velkasekce4 {
+    display: flex;
+    justify-content: center;
+}
+
+
+.obrazky {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    margin: 50px auto 100px auto;
+}
+
+#img1 {
+    border: 2px solid black;
+    background: none;
+}
+
+#img2 {
+    margin-top: 100px;
+    border: 2px solid black;
+}
+
+@media screen and (max-width:980px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        width: 200px;
+        height: 500px;
+    }
+    .container02 {
+        font-size: 90px;
+        justify-content: center;
+    }
+    .podnadpis {
+        font-size: 30px;
+        animation: none;
+        text-align: center;
+    }
+    .text01 {
+        margin-top: 500px;
+        width: 85%;
+    }
+    .animace1,.animace2 {
+        animation: none;
+    }
+    .obrazky {
+        width: 100%;
+    }
+
+    .sekce4 {
+        width: 300px;
+        animation: none;
+    }
+    .p1,.p2 {
+        animation: none;
+    }
+
+
+}
+
+
+
+
+
+font-family: 'Zenzai Itacha', sans-serif;
+
