@@ -10,35 +10,68 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "default": "O nás / About Us"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "O nás / About Us",
+      "required": true
     },
     "aboutContent": {
       "type": "richtext",
-      "required": true,
-      "description": "Main about section"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     },
     "historyTitle": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "default": "Historie / History"
     },
     "historyContent": {
       "type": "richtext",
-      "description": "Band history section"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "bandPhoto": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "metaDescription": {
       "type": "string",
-      "description": "SEO meta description"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

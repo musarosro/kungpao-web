@@ -10,39 +10,78 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "default": "Kontakt / Contact"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Kontakt / Contact",
+      "required": true
     },
     "introText": {
       "type": "richtext",
-      "description": "Introduction text"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "bookingEmail": {
       "type": "email",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "required": true
     },
     "bookingPhone": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "managementContact": {
       "type": "richtext",
-      "description": "Management contact details"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "socialLinks": {
       "type": "json",
-      "description": "Social media links {facebook, instagram, youtube, etc.}"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "address": {
       "type": "text",
-      "description": "Physical address if applicable"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "metaDescription": {
       "type": "string",
-      "description": "SEO meta description"
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
