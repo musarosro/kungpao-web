@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_about",
+  "info": {
+    "singularName": "page-about",
+    "pluralName": "page-abouts",
+    "displayName": "About Page",
+    "description": "About the band and history"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "O nás / About Us"
+    },
+    "aboutContent": {
+      "type": "richtext",
+      "required": true,
+      "description": "Main about section"
+    },
+    "historyTitle": {
+      "type": "string",
+      "default": "Historie / History"
+    },
+    "historyContent": {
+      "type": "richtext",
+      "description": "Band history section"
+    },
+    "bandPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "metaDescription": {
+      "type": "string",
+      "description": "SEO meta description"
+    }
+  }
+}

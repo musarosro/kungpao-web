@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_contact",
+  "info": {
+    "singularName": "page-contact",
+    "pluralName": "page-contacts",
+    "displayName": "Contact Page",
+    "description": "Contact information and booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Kontakt / Contact"
+    },
+    "introText": {
+      "type": "richtext",
+      "description": "Introduction text"
+    },
+    "bookingEmail": {
+      "type": "email",
+      "required": true
+    },
+    "bookingPhone": {
+      "type": "string"
+    },
+    "managementContact": {
+      "type": "richtext",
+      "description": "Management contact details"
+    },
+    "socialLinks": {
+      "type": "json",
+      "description": "Social media links {facebook, instagram, youtube, etc.}"
+    },
+    "address": {
+      "type": "text",
+      "description": "Physical address if applicable"
+    },
+    "metaDescription": {
+      "type": "string",
+      "description": "SEO meta description"
+    }
+  }
+}
