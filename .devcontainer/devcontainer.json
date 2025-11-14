@@ -1,0 +1,37 @@
+{
+  "name": "Kungpao Web Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "mhutchie.git-graph",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "forwardPorts": [3456, 1338, 5433],
+  "portsAttributes": {
+    "3456": {
+      "label": "Next.js Frontend",
+      "onAutoForward": "notify"
+    },
+    "1338": {
+      "label": "Strapi Backend",
+      "onAutoForward": "notify"
+    },
+    "5433": {
+      "label": "PostgreSQL Database",
+      "onAutoForward": "silent"
+    }
+  }
+  // "postCreateCommand": "cd backend && npm install && cd ../frontend && npm install"
+}

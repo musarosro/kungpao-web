@@ -1,0 +1,43 @@
+name: kungpao_web_development
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+      # Persist Strapi uploads
+      - strapi_uploads:/workspaces/kungpao-web/backend/public/uploads
+      # Cache npm and yarn for faster installs
+      - npm_cache:/home/node/.npm
+      - yarn_cache:/home/node/.yarn
+    command: sleep infinity
+    network_mode: service:db
+    depends_on:
+      - db
+    environment:
+      NODE_ENV: development
+      DATABASE_HOST: localhost
+      DATABASE_PORT: 5432
+      DATABASE_NAME: kungpao
+      DATABASE_USERNAME: kungpao
+      DATABASE_PASSWORD: kungpao_dev_password
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: kungpao
+      POSTGRES_USER: kungpao
+      POSTGRES_PASSWORD: kungpao_dev_password
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres-data:
+  strapi_uploads:
+  npm_cache:
+  yarn_cache:
