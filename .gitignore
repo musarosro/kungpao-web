@@ -49,3 +49,6 @@ backend/public/uploads/*
 
 # Docker
 .docker/
+
+# Extra
+templates/
