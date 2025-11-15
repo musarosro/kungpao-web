@@ -1,101 +1,81 @@
-interface StrapiResponse<T> {
-  data: T;
-  meta?: {
-    pagination?: {
-      page: number;
-      pageSize: number;
-      pageCount: number;
-      total: number;
-    };
-  };
-}
-
-interface StrapiEntity<T> {
-  id: number;
-  attributes: T;
-}
+import {
+  type AboutPageContent,
+  type BandMember,
+  type ContactPageContent,
+  type EventItem,
+  type GalleryItem,
+  type NewsItem,
+  type Song,
+  type StrapiResponse,
+} from '@/lib/types';
 
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1338';
-const API_URL = `${STRAPI_URL}/api`;
 
-export async function fetchAPI<T>(
-  path: string,
-  options: RequestInit = {}
-): Promise<T> {
-  const defaultOptions: RequestInit = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    cache: 'no-store', // Disable caching for development
-  };
-
-  const mergedOptions = {
-    ...defaultOptions,
-    ...options,
-    headers: {
-      ...defaultOptions.headers,
-      ...options.headers,
-    },
-  };
-
-  const url = `${API_URL}${path}`;
+async function fetchAPI<T>(endpoint: string, locale?: string): Promise<StrapiResponse<T>> {
+  const url = `${STRAPI_URL}${endpoint}`;
+  const urlWithLocale = locale ? `${url}${endpoint.includes('?') ? '&' : '?'}locale=${locale}` : url;
   
   try {
-    const response = await fetch(url, mergedOptions);
+    const res = await fetch(urlWithLocale, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+    });
 
-    if (!response.ok) {
-      console.error(`API call failed: ${response.statusText} - ${url}`);
-      throw new Error(`API call failed: ${response.statusText}`);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch ${endpoint}: ${res.status}`);
     }
 
-    return response.json();
+    return res.json();
   } catch (error) {
-    console.error(`Failed to fetch from Strapi: ${url}`, error);
+    console.error(`Error fetching ${endpoint}:`, error);
     throw error;
   }
 }
 
-// Helper functions for common API calls
-export async function getSongs() {
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>('/songs?populate=*');
+// Songs
+export async function getSongs(locale?: string) {
+  return fetchAPI<Song[]>('/api/songs?sort=releaseYear:desc&populate=*', locale);
 }
 
-export async function getSong(slug: string) {
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>(`/songs?filters[slug][$eq]=${slug}&populate=*`);
+export async function getSongBySlug(slug: string, locale?: string) {
+  return fetchAPI<Song[]>(`/api/songs?filters[slug][$eq]=${slug}&populate=*`, locale);
 }
 
-export async function getEvents(limit = 10) {
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>(`/events?sort=date:desc&pagination[limit]=${limit}&populate=*`);
+// Events
+export async function getEvents(limit = 50, locale?: string) {
+  return fetchAPI<EventItem[]>(`/api/events?sort=date:desc&pagination[limit]=${limit}&populate=*`, locale);
 }
 
-export async function getUpcomingEvents() {
-  const now = new Date().toISOString();
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>(`/events?filters[date][$gte]=${now}&filters[status][$eq]=upcoming&sort=date:asc&populate=*`);
+export async function getUpcomingEvents(locale?: string) {
+  const today = new Date().toISOString();
+  return fetchAPI<EventItem[]>(
+    `/api/events?filters[date][$gte]=${today}&filters[status][$eq]=upcoming&sort=date:asc&populate=*`,
+    locale
+  );
 }
 
-export async function getBandMembers() {
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>('/band-members?filters[isActive][$eq]=true&sort=order:asc&populate=*');
+// Band Members
+export async function getBandMembers(locale?: string) {
+  return fetchAPI<BandMember[]>('/api/band-members?filters[isActive][$eq]=true&sort=order:asc&populate=*', locale);
 }
 
-export async function getGalleryItems(category?: string) {
-  const categoryFilter = category ? `&filters[category][$eq]=${category}` : '';
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>(`/gallery-items?sort=date:desc${categoryFilter}&populate=*`);
+// Gallery
+export async function getGalleryItems(locale?: string) {
+  return fetchAPI<GalleryItem[]>('/api/gallery-items?sort=date:desc&populate=*', locale);
 }
 
-export async function getNewsItems(limit = 5) {
-  return fetchAPI<StrapiResponse<StrapiEntity<any>[]>>(`/news-items?sort=publishDate:desc&pagination[limit]=${limit}&populate=*`);
+// News
+export async function getNewsItems(limit = 10, locale?: string) {
+  return fetchAPI<NewsItem[]>(`/api/news-items?sort=publishDate:desc&pagination[limit]=${limit}&populate=*`, locale);
 }
 
-export async function getAboutPage() {
-  return fetchAPI<StrapiResponse<any>>('/page-about?populate=*');
+// Pages
+export async function getAboutPage(locale?: string) {
+  return fetchAPI<AboutPageContent | null>('/api/page-about?populate=*', locale);
 }
 
-export async function getContactPage() {
-  return fetchAPI<StrapiResponse<any>>('/page-contact?populate=*');
-}
-
-export function getStrapiMedia(url: string | null | undefined): string {
-  if (!url) return '';
-  if (url.startsWith('http')) return url;
-  return `${STRAPI_URL}${url}`;
+export async function getContactPage(locale?: string) {
+  return fetchAPI<ContactPageContent | null>('/api/page-contact?populate=*', locale);
 }

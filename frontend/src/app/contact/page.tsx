@@ -1,11 +1,12 @@
 import { getContactPage } from '@/lib/api';
+import type { ContactPageContent } from '@/lib/types';
 
 export default async function ContactPage() {
-  let page = null;
+  let page: ContactPageContent | null = null;
   
   try {
     const response = await getContactPage();
-    page = response.data;
+    page = response.data ?? null;
   } catch (error) {
     console.error('Error fetching contact page:', error);
   }

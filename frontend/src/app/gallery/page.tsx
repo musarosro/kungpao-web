@@ -1,8 +1,9 @@
 import { getGalleryItems } from '@/lib/api';
+import type { GalleryItem } from '@/lib/types';
 
 export default async function GalleryPage() {
   const response = await getGalleryItems();
-  const items = response.data || [];
+  const items: GalleryItem[] = response.data ?? [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16">
@@ -12,7 +13,7 @@ export default async function GalleryPage() {
         <p className="text-gray-600">No gallery items available yet. Add items in Strapi admin.</p>
       ) : (
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {items.map((item: any) => (
+          {items.map((item) => (
             <div key={item.id} className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
               <div className="w-full h-full flex items-center justify-center text-gray-400">
                 {item.title}

@@ -1,14 +1,15 @@
 import { getEvents } from '@/lib/api';
+import type { EventItem } from '@/lib/types';
 
 export default async function EventsPage() {
   const response = await getEvents(50);
-  const events = response.data || [];
+  const events: EventItem[] = response.data ?? [];
 
-  const upcoming = events.filter((e: any) => 
-    e.status === 'upcoming' && new Date(e.date) >= new Date()
+  const upcoming = events.filter((event) => 
+    event.status === 'upcoming' && new Date(event.date) >= new Date()
   );
-  const past = events.filter((e: any) => 
-    e.status === 'past' || new Date(e.date) < new Date()
+  const past = events.filter((event) => 
+    event.status === 'past' || new Date(event.date) < new Date()
   );
 
   return (
@@ -19,7 +20,7 @@ export default async function EventsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Upcoming</h2>
           <div className="space-y-4">
-            {upcoming.map((event: any) => (
+            {upcoming.map((event) => (
               <div key={event.id} className="bg-white border rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start">
                   <div>
@@ -52,7 +53,7 @@ export default async function EventsPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-6">Past Events</h2>
           <div className="space-y-2">
-            {past.map((event: any) => (
+            {past.map((event) => (
               <div key={event.id} className="border-b py-3 flex justify-between">
                 <div>
                   <span className="font-medium">{event.title}</span>

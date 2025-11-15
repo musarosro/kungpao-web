@@ -1,6 +1,12 @@
+'use client';
+
 import Link from 'next/link';
+import LanguageSelector from './LanguageSelector';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Navigation() {
+  const { t } = useTranslation();
+  
   return (
     <header className="sticky top-0 z-50 w-full bg-neutral-900/80 backdrop-blur-md border-b border-neutral-800">
       <div className="container mx-auto px-4 sm:px-10 lg:px-20">
@@ -23,30 +29,31 @@ export default function Navigation() {
                 </defs>
               </svg>
             </div>
-            <h2 className="text-[#F5F5F5] text-lg font-bold leading-tight tracking-tight">Kung Pao</h2>
+            <h2 className="text-[#F5F5F5] text-lg font-bold leading-tight tracking-tight">Kungpao</h2>
           </Link>
           
-          <div className="flex flex-1 justify-end gap-8">
+          <div className="flex flex-1 justify-end gap-4 items-center">
             <div className="hidden md:flex items-center gap-9">
               <Link href="/" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                Home
+                {t.navigation.home}
               </Link>
               <Link href="/songs" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                Music
+                {t.navigation.songs}
               </Link>
               <Link href="/events" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                Gigs
+                {t.navigation.events}
               </Link>
               <Link href="/gallery" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                Gallery
+                {t.navigation.gallery}
               </Link>
               <Link href="/about" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                About
+                {t.navigation.about}
               </Link>
               <Link href="/contact" className="text-[#F5F5F5] text-sm font-medium hover:text-[#FFFF00] transition-colors">
-                Contact
+                {t.navigation.contact}
               </Link>
             </div>
+            <LanguageSelector />
           </div>
         </div>
       </div>

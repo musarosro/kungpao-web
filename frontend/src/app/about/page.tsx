@@ -1,11 +1,12 @@
 import { getAboutPage } from '@/lib/api';
+import type { AboutPageContent } from '@/lib/types';
 
 export default async function AboutPage() {
-  let page = null;
+  let page: AboutPageContent | null = null;
   
   try {
     const response = await getAboutPage();
-    page = response.data;
+    page = response.data ?? null;
   } catch (error) {
     console.error('Error fetching about page:', error);
   }

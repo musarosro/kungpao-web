@@ -1,9 +1,10 @@
 import { getSongs } from '@/lib/api';
+import type { Song } from '@/lib/types';
 import Link from 'next/link';
 
 export default async function SongsPage() {
   const response = await getSongs();
-  const songs = response.data || [];
+  const songs: Song[] = response.data ?? [];
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
@@ -13,7 +14,7 @@ export default async function SongsPage() {
         <p className="text-gray-600">No songs available yet. Add songs in Strapi admin.</p>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {songs.map((song: any) => (
+          {songs.map((song) => (
             <Link 
               key={song.id}
               href={`/songs/${song.slug}`}
