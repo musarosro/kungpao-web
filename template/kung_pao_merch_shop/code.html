@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kung Pao - Merch Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-6 sm:px-10 py-3 bg-black/80 backdrop-blur-sm">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">Kung Pao</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<div class="hidden sm:flex items-center gap-6">
+<a class="text-white hover:text-yellow-300 text-sm font-medium" href="#">Home</a>
+<a class="text-white hover:text-yellow-300 text-sm font-medium" href="#">Music</a>
+<a class="text-white hover:text-yellow-300 text-sm font-medium" href="#">Shows</a>
+<a class="text-yellow-300 text-sm font-bold" href="#">Merch</a>
+</div>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 text-white hover:bg-white/20">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</header>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4 py-10 md:py-16 text-center">
+<h1 class="text-white text-5xl md:text-6xl font-black tracking-tighter w-full">Merch Shop</h1>
+</div>
+<!-- ImageGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Black t-shirt with a band logo on a plain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVnX0mCAq01iGcqP1vEUi2ZbthUIdevBNJMNsWjVyVBH9HsyY6gRuUo6JocNrZY5mus_8FXU03p38Am9Grt5Uhk56zch-nEa6Utgk2YsvlE-S8uDTmjmA2KBg7-jZiRDkkdt0jG3dIXQOT2XM5i5gkK7zNK3WSHrsrtaWWwnWqjkxCKRppW1IrH4R8N03E209-d0q-TH7lvlXXKbp4t5dzdnQ-9Or6HaKOLWzMg1bjGhHsHdCH3zh6co-vntU14PUODpKX6xwFuUM"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Kung Pao Logo Tee</p>
+<p class="text-yellow-300 text-base font-semibold">$25.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Black hoodie with intricate album art on the back" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2TWmEZrBLsXcnC4xXCU5pE7qqREtoafVgKqQWUxqEIwo1Fn3Ecr5J-9QkOE8NS8HnDcpApAa2cUrnednc004xAoHvnZW61BfVWPBT0lIeRPr_5YU7mEUO9hqIAigQvXB_oEkY6hQb7mkBdTF2xpISB6Wg4s9Ln6CWpY9xvOB6lgZSzT5tNsEf4-hgvTaPWm28TxyjYsH2FxnG_FhWvl9Mpx1uOo-SasygEUvvwwQf86ZWeMrwqJ-rcQyxckROIUY_-eAB4vtnwW0"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Album Art Hoodie</p>
+<p class="text-yellow-300 text-base font-semibold">$50.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Vinyl record in its sleeve featuring the band's latest album cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKo0zZGk0-z-wdXpWk2O0oZP9MkGJ6McnelOmmOLtkhCMUoHOmW9qCWzder4D_j7CC929r4oqMMx0k6C7XxCIMAKaUSzZWx-hgfjuKdfNqu4evVGGxl0CwK56nGVSxwxPlqx_zU2K5zZ1QZbGklQVnNfVZY4hE3HCMUuJV1jYfX5Eo5jNymrNQhwv1aEk0M_qZGn46v5m8OYFwcnyyrWO4h7t51PkPOashlTRbDEajbtr8NPnPmNa4fOn72UZ-N3SWhIc_R_c264o"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Latest Album - Vinyl</p>
+<p class="text-yellow-300 text-base font-semibold">$35.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Black beanie with an embroidered band logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7B8WXSTa3VLMx5mWmdD4I0W7qTy0b0KhFP7Su6ku7Cor-NUpeI-U9njz6OTFfR3VsvMy07A3hzU1Fp45I9N7ryhVlt4gKE15NLy5_ZgGZx0fqvRigABLjdouciQRPHtkoqIyN3Ri-43NiqzovXNZe5CK4VexxMmPE2zPPLQh3OlavmvlpRrXCJm9pa75zIwBjtiDbq20F5mG4djdK3GDAlk7jYuTlUvW1v50MnA3f2Htt-vDVSwT8Akwdjj4fmnYint5aslvyXfI"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Embroidered Beanie</p>
+<p class="text-yellow-300 text-base font-semibold">$20.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Stylized concert tour poster with band photo and dates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgbAfj_A5Kp77celpXhonyNQUb9-LeQOJIqxih6rwamMq5r1XPJvOKmqB3Pk5nI6gUKQN4wfXnzXk2SjrIw7Ltxsj_E40mnQZZ8-ALZ0WhJeuRzj3ZupWFHamKV1FIR-QeWavqATnYBGoNTvL9mvCwH2X9SUkTf_c-Z6EKqKsByvWOGevbR_lRVqoa3wO2SRObBowJZzZfwgpRuEAoGl23fjJkJMP9e5aUhxLgTZKXLe7igkKl0fcWRdWyB-FAOdi0mWtsHRYMOUU"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Tour Poster</p>
+<p class="text-yellow-300 text-base font-semibold">$15.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A collection of various band-themed stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaIaFMVQgCMI8dym_tFhkXqwqXJjQajVh66BbsAin9n72UbrLxI9rwgNqzKXmMog-D4ofk8VepzrFPb3axgD57TA1MEW8V3RLH89ppwYQbnXc6Gkt9sFBi7dqRF39m_yju0iDfuCkGixS7c2LUBV6cWkth7AsPEH_3EUbuky9j1EHUTYnPgJ0Z0cbVBKupWpUecf2vV6KQdxtyoY4EOuEKT67YrxwGDiTgPLKb8Yo-FoWbTZBRQVabFqtJEvSTDH4SmmHvjc8HeJw"/>
+</div>
+<div class="flex flex-col items-center text-center mt-2">
+<p class="text-white text-lg font-medium">Band Sticker Pack</p>
+<p class="text-yellow-300 text-base font-semibold">$10.00</p>
+<button class="mt-3 w-full max-w-48 cursor-pointer rounded-md h-10 bg-red-600 text-white text-sm font-bold tracking-wide hover:bg-red-700 transition-colors">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="flex flex-col gap-6 px-5 py-16 text-center border-t border-solid border-white/10 mt-10">
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-white/60 hover:text-yellow-300 transition-colors" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 18V5l12-2v13"></path>
+<circle cx="6" cy="18" r="3"></circle>
+<circle cx="18" cy="16" r="3"></circle>
+</svg>
+</a>
+<a class="text-white/60 hover:text-yellow-300 transition-colors" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+</svg>
+</a>
+<a class="text-white/60 hover:text-yellow-300 transition-colors" href="#">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+<path d="m10 15 5-3-5-3z"></path>
+</svg>
+</a>
+</div>
+<p class="text-white/50 text-sm font-normal">© 2024 Kung Pao. All Rights Reserved.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

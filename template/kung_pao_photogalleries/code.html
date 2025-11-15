@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kung Pao - Photogalleries</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 w-full bg-background-dark/80 backdrop-blur-sm border-b border-solid border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between whitespace-nowrap h-16">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Kung Pao</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-400 transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-400 transition-colors" href="#">Music</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-400 transition-colors" href="#">Shows</a>
+<a class="text-yellow-400 text-sm font-bold leading-normal" href="#">Photogalleries</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-400 transition-colors" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors">
+<span class="truncate">Merch</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Photogalleries</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 mt-6">
+<!-- SideNavBar (Gallery List) -->
+<aside class="lg:w-1/4 xl:w-1/5">
+<div class="flex h-full flex-col justify-between p-4 sticky top-24">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">GALLERIES</h1>
+<p class="text-white/60 text-sm font-normal leading-normal">Select a gallery to view</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary" href="#">
+<span class="material-symbols-outlined text-white text-2xl">photo_camera</span>
+<p class="text-white text-sm font-medium leading-normal">Live at The Viper Room - 2023</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-yellow-400 text-2xl">photo_camera</span>
+<p class="text-white text-sm font-medium leading-normal">Studio Sessions - Spring '24</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-yellow-400 text-2xl">photo_camera</span>
+<p class="text-white text-sm font-medium leading-normal">Behind the Scenes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-yellow-400 text-2xl">photo_camera</span>
+<p class="text-white text-sm font-medium leading-normal">Fan Photos</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-10">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-yellow-400 text-2xl">translate</span>
+<p class="text-white text-sm font-medium leading-normal">Language</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content (Gallery View) -->
+<div class="lg:w-3/4 xl:w-4/5">
+<!-- SectionHeader -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b border-white/10">Live at The Viper Room - 2023</h2>
+<!-- ImageGrid -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Kung Pao's lead singer screaming into a microphone under red stage lights." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCLJkISV-3ejyXJcraFnQhIAkLVaodLvuA93nbRccAlE0jCc2f05e-pS45ZIOMc4iZb4A7nREmMoPtzeq1hXSjOsY5Z8WSznNz6D8gncbmboL24_96gEREcvauN_n8ZlKwZ5J7UuViIaGKfcWQclHw21eMNTAUL9wVE7800RYv9tyDhn0KIHT5ZUBeP8YRzxV8hrwZSvSYT4ERuuYdyjADzP7DaztdWiWM0PcQU-2WaJ4x69ShxA165OlTETW2iaBasK2ZaHbnOcQ");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Guitarist in mid-solo, illuminated by a single spotlight." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAANo3XKQSCg-_F0e1kSfEn2DhZPpHxra0nEFhMinuEUdQHV_FwrUNlPMgVbv_NWqaYDVmI4J9IblEeD-tAkUbv8XzFvAMnkz5-od5-aXZEcJfAJrzOHq99wn9Az8Hqoo71azY-ZwqRBqwMD2n_djJ9muDRlujsSjsZI_m_ma2cZwXSDjFR-NpqVhxYsty5v--6rCLKnxvdPFfdUkgcBEOLpLt-4hdlNk2JC773AGPpfLjNfTrOliWmkrwxFfszgVJz2E4jRbUAF0");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Drummer silhouetted against a backdrop of flashing lights and smoke." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2ZSgZU2tWixtRlx_mimYhfwcuXL0exCZKEHlvXxhO4qbQ8kU2xhgDU9JQGUywf0RS7INEl_7MtqNMAEb9BM-3yj11Ay5C9uTImzeH3BdyK0s74EHOgAFizg4K7OUwT0eDLzH89aNxUHgaIxUjQXV0xPgE0_8VFrtvXMK5oJZ1WvXSI26SsVuTLezWon-6qyQSD8mAicN1Ecr1wmjtew8hutC13MdmxdHbhlpZmfEpKXrohE5a54F7gbFRRmCtciR7j0b0h5DCc58");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Bassist looking out at the crowd, lit by blue and purple lights." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJzb6IvqBo_w13trPhbQUu02zoSirUv7FN7JNnPXyRnr5UeIdG-cVmL-5EFxT58I-wGNg4QZV0JR3-mlxbEftIwrZ2AeJNsTYnC-VxUMAYbxuZ-rYCLkt9uO9ymc9PcpVNca0-q_kNuMoPwE_OATart6Q9XEFAzj6A_bKJ5gioz3EUm5TWtAIo4GtvSmQaXi0i6JMWMzZGPNp1OASsWwppylMmS-fNkXuH69YVTCk-f-imk-CnYh1Y_FWO8t1big0IyMynb2NV5oM");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Wide shot of the band on stage at The Viper Room." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCh19t5iq1qE51gF_3dUykeLw899ixePJotF6kloro_bZ8-s_eGi0e2YKI61q3zQA0-ghpAEr-dd8TZgBSf8Z8EdWnsVjRP9FlFGfWQ8bfWntvhv1J2kmvebM9_pG4wg_d12K8oMdS-zPUsAnXA_zz1g3rmQwdKIG6S81mTHcKznCf86qu7WA74pxugAjR-7jzx1gB0OuE3UDQ3kE6DohcsWvvlN8lqBv7at0a-iaeQxlKOMUsOpHPiSwx6dz7jhxNHiF9xeokr7o");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="A close-up of a guitar with the band's logo." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfaLME4gwzJ4Xyib-hPQOeHRtn5_Q6xRb1gExIFBgN6HkaKPgnga8In6iCtAKJVV52EfJzxE1PviNfOjhA2Bdt4Wxhw2JjUwTItYDq5oTaUKrRuqi759lxfu9r6mqJmEPZMwT_c3NQk0zSyDkxBB9rXooOpRL-N9J2yMf6qxWFhXg5ny0SfvAu4pgJ5EOr34zwRQDU9oK22S2x1Qv1QD74Edbm-frpjSf35XiN7-YDdMmOwDkcF45JmHhppv2wwggEgk8dkK0eRxE");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="The crowd cheering with hands in the air." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBV-aamSNEZKOakyBLZq8aW9A8lkcDxWxAJ2thR6SgZbLqfJrmAYm3AQ8n_1MdVeebUGIxkZEoHlg8ePIoW18-7MuxOMWntuF0xe74NgU5IfrvEnGlcbvVf_WUmTyBVWKn7fCADare38D4L5eqypKp_sjKpMaEEUPv04jFV-HoiLsJapwR0lXs0fSY-u6dBZCjWKCtT6gyr1ftLTpgrsQoOFiFGMzDuiwLGlnIWLtZvL9m4HpItJk9Ca7Fu73NEBBl2TimVtoL2xqk");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Band members taking a bow after the show." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAO-dt1g3HbvzNqfgZGHpZRqi6vU-8rfqt-Qw6aENq-xTWXNZgqBeDOgz5xDLGYFSM7UQpLdaHBt4rL4d_PATGGKiYLPYH7tbrxi56HoPnZMNPucKEnFv2G2ATxCNqICsChkUQkFDIblhnAc6vv4VnZLFtZEY75wfwt2yTntm-ovwACd2ohYD2-3G80TlQus-3bDgD0eBgF7whnofkpsmOvCf8_cQ8lkdUJnYOM1ISQJOKu5Zgr8BwbdfZSvfsLJHg_82ZwcaehZmw");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Another shot of the lead singer, mid-song." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhN-9mYc-tQ05TAxggXkF9_CcTtjtireo7z1KCPxnbUtZpzgsd1hqUx-l7yBnPpkMk1HMpI2N6bF7-3_8puOacq1z20Md6PiHBsoavk_Fxz15TmHUIdXiHTPHK1NODYUfPkWYxbqMHXaOaQmEuaZjQepc3N0qrkC4zbDYcT7V52WmkEcZ_qkNF7R-tVQiiq0AiOH5qG5JqAr1PEkuqW0hL7HAtOfXbPalXZocaWRkxAUDDUPirWPSKW6lDxTZZJBNlC8tPBlcRvZY");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="View from the back of the stage looking at the crowd." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKNHAlJ_1pBclh7ZuW9iAa4TMRkoa7NwNMQricaCrgOOJyUH3nBUvGwcfbkfyxBaMZPoamHas02W0vjddHTdrrxdUkzHsEekN1os5AjpfTqipZBD4JpFY9PFl0g6BUvEApIqY6Qfm7i1yxXcIqxqyyjehpn2PzIUSNFJwoS1qUAYWIROKk0dKYUtGhmD3YzM3v9YaXV5xFbBvsjaPesgitfmYbIKF02Ov3AbEY5qROZSwFJ1f4k1leny5TKltAIuNeXzA-4KqhI9c");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="A candid shot of the band laughing backstage." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9vzPRSP1UP3-6TTz7urQ7cFxnCi4MEjV4n30pbx_xOC-PiTvwVxojPBw87aMl4OA2mHcWf8cgD2dDTojc6BxVNRDCvYPsPtjFNbl0Fwgc4E9HQfE7wNAgvlVi8p-tBNvbBrNxwK8Z_x96draEEUNLari_mlVWkpOuTwD9j31Cu5twFwaeVW-uNTR_5VTs2HHTomp6YL_WwSmgz6P8wG-n-__WkD0i6gERPuhntC8cO8D-A0lhePHKG985NEl89B_LjS1yttWSUNg");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+<div class="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-300 group-hover:scale-110" data-alt="Drumsticks resting on a snare drum after the performance." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBR1QQ8M-1xrKwX8FgBKlc2qIYp7z52vasvhOIPJxzsC8FJoG7paYGMM5sTqhy3Bc21zygQzZ-oJsyZmrxEfMSnEEGTMvpvSGCGoUqP24m3JL6I-u0hd8_Nn8NKfwOCsj94wTBzmlEPobfW6kMjz4090Y929Bqt2r8vhEEMl1W9COaNeN17SIre8YNpHRdol439-jea9rjLI3NgNIkumvq9YWQFu9f6Up9QBgZhaFjelE0ZWGtf4SZF-KMOrnr6Ip5jrSukl7CrZzc");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer border-2 border-transparent group-hover:border-yellow-400"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

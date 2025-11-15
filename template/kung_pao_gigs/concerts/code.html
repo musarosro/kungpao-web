@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kung Pao - Gigs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#000000",
+                        "yellow-accent": "#FFFF00",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-white">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-800 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Kung Pao</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-8">
+<div class="hidden sm:flex items-center gap-6 md:gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-accent transition-colors" href="#">Home</a>
+<a class="text-yellow-accent text-sm font-bold leading-normal" href="#">Gigs</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-accent transition-colors" href="#">Music</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-yellow-accent transition-colors" href="#">About</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent text-white border border-gray-800 hover:bg-yellow-accent hover:text-black transition-colors gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-base">language</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col gap-12 mt-10">
+<!-- Upcoming Gig Section -->
+<section class="flex flex-col items-center text-center">
+<!-- SectionHeader -->
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Next Show In:</h2>
+<!-- Timer -->
+<div class="w-full max-w-xl flex gap-2 sm:gap-4 py-6 px-4">
+<div class="flex grow basis-0 flex-col items-stretch gap-4">
+<div class="flex h-16 sm:h-20 grow items-center justify-center rounded-lg px-3 bg-gray-900 border border-gray-800">
+<p class="text-primary text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em]">14</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-white text-xs sm:text-sm font-normal leading-normal">Days</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-4">
+<div class="flex h-16 sm:h-20 grow items-center justify-center rounded-lg px-3 bg-gray-900 border border-gray-800">
+<p class="text-primary text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em]">20</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-white text-xs sm:text-sm font-normal leading-normal">Hours</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-4">
+<div class="flex h-16 sm:h-20 grow items-center justify-center rounded-lg px-3 bg-gray-900 border border-gray-800">
+<p class="text-primary text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em]">45</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-white text-xs sm:text-sm font-normal leading-normal">Minutes</p></div>
+</div>
+<div class="flex grow basis-0 flex-col items-stretch gap-4">
+<div class="flex h-16 sm:h-20 grow items-center justify-center rounded-lg px-3 bg-gray-900 border border-gray-800">
+<p class="text-primary text-2xl sm:text-3xl font-bold leading-tight tracking-[-0.015em]">33</p>
+</div>
+<div class="flex items-center justify-center"><p class="text-white text-xs sm:text-sm font-normal leading-normal">Seconds</p></div>
+</div>
+</div>
+<!-- BodyText -->
+<p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">August 28, 2024 @ The Viper Room, Los Angeles</p>
+<!-- SingleButton -->
+<div class="flex px-4 py-3 justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-yellow-accent text-black hover:brightness-90 transition-all text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Get Tickets</span>
+</button>
+</div>
+</section>
+<!-- Past Gigs Section -->
+<section class="flex flex-col items-start px-4">
+<!-- SectionHeader -->
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-6 pt-5">Gig History</h2>
+<div class="w-full flex flex-col gap-6">
+<!-- Concert Card 1 -->
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full border-b border-gray-800 py-6">
+<div class="flex-shrink-0 w-full sm:w-40">
+<p class="text-white font-bold text-lg">June 15, 2024</p>
+<p class="text-gray-400">The Viper Room, Los Angeles</p>
+</div>
+<div class="flex-grow">
+<p class="text-white mb-3">Our first show at The Viper Room was electric! Thanks to everyone who came out and rocked with us. We played a few new tracks that will be on the next album.</p>
+<a class="text-yellow-accent font-bold hover:underline" href="#">View Gallery</a>
+</div>
+</div>
+<!-- Concert Card 2 -->
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full border-b border-gray-800 py-6">
+<div class="flex-shrink-0 w-full sm:w-40">
+<p class="text-white font-bold text-lg">April 02, 2024</p>
+<p class="text-gray-400">Whisky a Go Go, West Hollywood</p>
+</div>
+<div class="flex-grow">
+<p class="text-white mb-3">An unforgettable night opening for the legends, Steel Panther. The energy was insane from start to finish. Check out the fan photos on <a class="text-yellow-accent font-bold hover:underline" href="#">our Instagram</a>!</p>
+<a class="text-yellow-accent font-bold hover:underline" href="#">Watch Videos</a>
+</div>
+</div>
+<!-- Concert Card 3 -->
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full border-b border-gray-800 py-6">
+<div class="flex-shrink-0 w-full sm:w-40">
+<p class="text-white font-bold text-lg">January 20, 2024</p>
+<p class="text-gray-400">The Roxy, West Hollywood</p>
+</div>
+<div class="flex-grow">
+<p class="text-white mb-3">Kicking off the new year with a packed house at The Roxy. We debuted 'Midnight Fury' live for the first time and the crowd went wild.</p>
+<a class="text-yellow-accent font-bold hover:underline" href="#">View Gallery</a>
+</div>
+</div>
+<!-- "No Upcoming Gigs" State Example (commented out) -->
+<!-- 
+                                <section class="flex flex-col items-center text-center py-20">
+                                    <h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Upcoming Shows</h2>
+                                    <p class="text-gray-400 text-base leading-normal pb-6">No upcoming gigs are scheduled at the moment.</p>
+                                    <p class="text-white text-lg">Sign up for our newsletter to be the first to know about new dates!</p>
+                                    <div class="flex px-4 py-6 justify-center">
+                                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-yellow-accent text-black hover:brightness-90 transition-all text-base font-bold leading-normal tracking-[0.015em]">
+                                            <span class="truncate">Subscribe</span>
+                                        </button>
+                                    </div>
+                                </section>
+                                -->
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>
