@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "songs": "Songs",
+    "events": "Events",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "newSingle": "New Single Coming Soon",
+    "subtitle": "Get ready for our latest track dropping next month",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "getNotified": "Get Notified",
+    "latestNews": "Latest News",
+    "readMore": "Read More",
+    "noNews": "No news available",
+    "upcomingGigs": "Upcoming Gigs",
+    "getTickets": "Get Tickets",
+    "viewAllEvents": "View All Events",
+    "experienceLive": "Experience the Energy Live",
+    "tagline": "Join us for an unforgettable night of music and entertainment",
+    "listenToSongs": "Listen to Our Songs",
+    "aboutBand": "About the Band"
+  }
+}

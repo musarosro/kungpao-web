@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "home": "Domů",
+    "about": "O nás",
+    "songs": "Písně",
+    "events": "Akce",
+    "gallery": "Galerie",
+    "contact": "Kontakt"
+  },
+  "homepage": {
+    "newSingle": "Nový singl již brzy",
+    "subtitle": "Připravte se na naši nejnovější skladbu příští měsíc",
+    "days": "Dny",
+    "hours": "Hodiny",
+    "minutes": "Minuty",
+    "seconds": "Sekundy",
+    "getNotified": "Být informován",
+    "latestNews": "Nejnovější zprávy",
+    "readMore": "Číst více",
+    "noNews": "Žádné zprávy k dispozici",
+    "upcomingGigs": "Nadcházející koncerty",
+    "getTickets": "Koupit lístky",
+    "viewAllEvents": "Zobrazit všechny akce",
+    "experienceLive": "Zažijte energii naživo",
+    "tagline": "Připojte se k nám na nezapomenutelný večer hudby a zábavy",
+    "listenToSongs": "Poslechnout si naše písně",
+    "aboutBand": "O kapele"
+  }
+}

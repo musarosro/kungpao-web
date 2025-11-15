@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "songs": "歌曲",
+    "events": "活动",
+    "gallery": "画廊",
+    "contact": "联系"
+  },
+  "homepage": {
+    "newSingle": "新单曲即将发布",
+    "subtitle": "准备好迎接我们下个月的最新曲目",
+    "days": "天",
+    "hours": "小时",
+    "minutes": "分钟",
+    "seconds": "秒",
+    "getNotified": "获取通知",
+    "latestNews": "最新消息",
+    "readMore": "阅读更多",
+    "noNews": "暂无消息",
+    "upcomingGigs": "即将举行的演出",
+    "getTickets": "购买门票",
+    "viewAllEvents": "查看所有活动",
+    "experienceLive": "体验现场能量",
+    "tagline": "加入我们，度过难忘的音乐娱乐之夜",
+    "listenToSongs": "聆听我们的歌曲",
+    "aboutBand": "关于乐队"
+  }
+}
